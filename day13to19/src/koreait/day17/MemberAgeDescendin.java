@@ -1,0 +1,18 @@
+package koreait.day17;
+
+import java.util.Comparator;
+
+public class MemberAgeDescendin implements Comparator<Member>{
+//Member클래스의 비교기준을 설정합니다. 나이 오름차순 결정합니다.
+
+	@Override
+	public int compare(Member o1, Member o2) {
+		Integer a = o1.getAge();	//int를 Integer로 참조
+		Integer b = o2.getAge();
+		return b.compareTo(a);		//compareTo는 비교메소드 : 레퍼클래스의 메소드
+		
+		//a > b : 음수, a==b : 0, a<b : 양수
+	}
+
+
+}
